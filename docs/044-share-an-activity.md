@@ -15,7 +15,7 @@ Firstly, you need the URI of the activity that you want to share, example :
 
 ### Request
 
-'GET https://api.decathlon.net/sportstrackingdata/v2/share_activities`
+`GET https://api.decathlon.net/sportstrackingdata/v2/share_activities`
  
 
 ### Request Body
