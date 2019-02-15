@@ -35,7 +35,7 @@ Get the collection of records.
 
 ### Request
 
-`GET https://api.decathlon.net/sportstrackingdata/v2/user_records`
+`GET https://api-eu.decathlon.net/sportstrackingdata/v2/user_records`
  
 
 
@@ -45,7 +45,7 @@ Here we get all records for an user and specify the sport 121 (aka Running cf /v
 
 ```shell
 curl -X GET \
-    https://api.decathlon.net/sportstrackingdata/v2/user_records?sport=121 \
+    https://api-eu.decathlon.net/sportstrackingdata/v2/user_records?sport=121 \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \

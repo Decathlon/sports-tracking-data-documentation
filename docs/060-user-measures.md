@@ -7,7 +7,7 @@ Each measure is dated, when you get a collection you can show the evolution of t
 
 For these examples we will use the datatype 181: Weight in gramms :
 
-`GET https://api.decathlon.net/sportstrackingdata/v2/datatypes/181`
+`GET https://api-eu.decathlon.net/sportstrackingdata/v2/datatypes/181`
 
 ```json
 {
@@ -35,7 +35,7 @@ For these examples we will use the datatype 181: Weight in gramms :
 
 ### Request
 
-`POST https://api.decathlon.net/sportstrackingdata/v2/user_measures`
+`POST https://api-eu.decathlon.net/sportstrackingdata/v2/user_measures`
  
 
 > Request Body
@@ -58,7 +58,7 @@ You will need to indicated some URI ressources to create a new user measure :
 
 ```shell
 curl -X POST \
-    https://api.decathlon.net/sportstrackingdata/v2/user_measures \
+    https://api-eu.decathlon.net/sportstrackingdata/v2/user_measures \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \
@@ -102,7 +102,7 @@ status 5xx : Server errors, check response for details.
 
 ```shell
 curl -X GET \
-    https://api.decathlon.net/sportstrackingdata/v2/user_measures?datatype=181 \
+    https://api-eu.decathlon.net/sportstrackingdata/v2/user_measures?datatype=181 \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' 

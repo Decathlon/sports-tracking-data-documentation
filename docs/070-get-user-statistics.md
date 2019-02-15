@@ -39,14 +39,14 @@ In this example we will look for statistics on 2018 for the running sport (121)
 
 ### Request
 
-` GET https://api.decathlon.net/sportstrackingdata/v2/user_sumups`
+` GET https://api-eu.decathlon.net/sportstrackingdata/v2/user_sumups`
  
 
 > Curl
 
 ```shell
 curl -X GET \
-    https://api.decathlon.net/sportstrackingdata/v2/user_sumups?period=2018&sport=121 \
+    https://api-eu.decathlon.net/sportstrackingdata/v2/user_sumups?period=2018&sport=121 \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \

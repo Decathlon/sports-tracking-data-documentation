@@ -4,7 +4,7 @@ Add a sport activity to your account
 
 ### Request
 
-`POST https://api.decathlon.net/sportstrackingdata/v2/activities`
+`POST https://api-eu.decathlon.net/sportstrackingdata/v2/activities`
  
 
 ## Request Body
@@ -128,7 +128,7 @@ To construct the body of our activity, you will need to describe the activity, n
 
 ```shell
 curl -X POST \
-    https://api.decathlon.net/sportstrackingdata/v2/activities \
+    https://api-eu.decathlon.net/sportstrackingdata/v2/activities \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \
