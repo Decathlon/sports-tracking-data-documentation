@@ -20,7 +20,7 @@ This page shows you how to create a new device for an user.
   "serial": "serialnumber123456",
   "model": "/v2/device_models/1",
   "firmware": "/v2/firmwares/1",
-  "user": "/v2/users/{{ldid}}",
+  "user": "/v2/users/{{user_id}}",
   "ownership": 0,
   "lastConnectedAt": "2018-04-16T16:05:11.896Z"
 }
@@ -44,7 +44,7 @@ curl -X POST \
   "serial": "serialnumber123456",
   "model": "/v2/device_models/1",
   "firmware": "/v2/firmwares/1",
-  "user": "/v2/users/{{ldid}}",
+  "user": "/v2/users/{{user_id}}",
   "ownership": 0,
   "lastConnectedAt": "2018-04-16T16:05:11.896Z"
   }' 
@@ -65,7 +65,7 @@ status 201 : Created
     "serial": "serialnumber123456",
     "model": "/v2/device_models/1",
     "firmware": "/v2/firmwares/1",
-    "user": "/v2/users/820d0a384a7013997f69",
+    "user": "/v2/users/820d0XXXXXa7013969",
     "ownership": 0,
     "lastConnectedAt": "2018-04-16T16:05:11+00:00",
     "createdAt": "2018-08-17T09:35:13+00:00",
@@ -88,7 +88,7 @@ Please refer to the swagger to see how to list all devices for an user, how to u
 Generally, the serial come from :
 
 - the real serial number of the product (ex: 1CD2071D-1440-4E5F-8C23-446D3B9B )
-- on the smartphones , a string composed by the os and the ldid  (ex : androidapp-e615fb7b-839a-4e65-98)
+- on the smartphones , a string composed by the os and the user id  (ex : androidapp-e615fb7b-839a-4e65-98)
 
 We recommend these characters :
 a-z A-Z 0-9 - 

@@ -20,7 +20,7 @@ To construct the body of our activity, you will need to describe the activity, n
     "name":"My workout",
     "startdate":"2018-04-19T08:28:49+02:00",
     "duration":954,
-    "user":"/v2/users/{{ldid}}",
+    "user":"/v2/users/{{user_id}}",
     "sport":"/v2/sports/381",
     "connector":"/v2/connectors/702",
     "location":{
@@ -136,7 +136,7 @@ curl -X POST \
 	"name":"My workout",
 	"startdate":"2018-04-19T08:28:49+02:00",
 	"duration":954,
-	"user":"/v2/users/{{ldid}}" ... }' 
+	"user":"/v2/users/{{user_id}}" ... }' 
 ```
 
 

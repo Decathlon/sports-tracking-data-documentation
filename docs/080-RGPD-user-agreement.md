@@ -28,7 +28,7 @@ curl -X POST \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \
   -d '{
-  "user": "/v2/users/#USERLDID#",
+  "user": "/v2/users/#USER_ID#",
   "serviceKey": "DecathlonCoach",
   "state": "accepted",
   "filename": "legal-document-CGS-v1.1-20180808"
@@ -45,7 +45,7 @@ status 201 : Created
     "@id": "/v2/user_agreements/1",
     "@type": "UserAgreement",
     "id": 1,
-    "user": "/v2/users/820d0a384a7013997f69",
+    "user": "/v2/users/820d0XXXXXa7013969",
     "serviceKey": "DecathlonCoach",
     "state": "accepted",
     "dateAccept": "2018-08-10T13:28:10+00:00",
@@ -101,7 +101,7 @@ status 200 : Ok
             "@id": "/v2/user_agreements/1",
             "@type": "UserAgreement",
             "id": 1,
-            "user": "/v2/users/820d0a384a7013997f69",
+            "user": "/v2/users/820d0XXXXXa7013969",
             "serviceKey": "DecathlonCoach",
             "state": "accepted",
             "dateAccept": "2018-08-10T13:28:10+00:00",
@@ -158,7 +158,7 @@ status 200 : OK
     "@id": "/v2/user_agreements/1",
     "@type": "UserAgreement",
     "id": 1,
-    "user": "/v2/users/820d0a384a7013997f69",
+    "user": "/v2/users/820d0XXXXXa7013969",
     "serviceKey": "DecathlonCoach",
     "state": "rejected",
     "dateAccept": "2018-08-10T13:28:10+00:00",
@@ -174,3 +174,10 @@ status 5xx : Server errors, check response for details.
 
 
 ```
+
+## Other RGPD rights
+
+The API permits to export all your data and receive a link to access to your archive.
+
+The API permits to delete your account, a delay of 24 hours may be applicable.
+

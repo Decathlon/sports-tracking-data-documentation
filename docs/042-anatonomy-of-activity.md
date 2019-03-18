@@ -30,7 +30,7 @@ status 200 : OK
     "@type": "Activity",
     "id": "eu2cbe4bbb24082fd9ad",
     "name": "Biking 2019-02-12 14:07",
-    "user": "/v2/users/820d0a384a7013997f69",
+    "user": "/v2/users/820d0XXXXXa7013969",
     "sport": "/v2/sports/381",
     "userDevice": null,
     "startdate": "2019-02-12T14:07:33+00:00",
@@ -44,7 +44,7 @@ status 200 : OK
     "userSession": null,
     "correctedElevation": true,
     "images": [],
-    "thumbnail": "https://linkdata-ressources-eu2.geonaute.com/prod/820d0a384a7013997f69/maps/eu2cbe4bbb24082fd9ad.png",
+    "thumbnail": "https://linkdata-ressources-eu2.geonaute.com/prod/820d0XXXXXa7013969/maps/eu2cbe4bbb24082fd9ad.png",
     "dataSummaries": {
         "3": 159,
         "4": 122,
@@ -180,7 +180,7 @@ We find here all the field to basically describe the activity.
     "@type": "Activity",
     "id": "eu2cbe4bbb24082fd9ad",
     "name": "Biking 2019-02-12 14:07",
-    "user": "/v2/users/820d0a384a7013997f69",
+    "user": "/v2/users/820d0XXXXXa7013969",
     "sport": "/v2/sports/381",// sport of the activity
     "userDevice": null, // Decathlon user device id, required if the activity is not manual
     "startdate": "2019-02-12T14:07:33+00:00", // datetime of the start of the activity
@@ -194,7 +194,7 @@ We find here all the field to basically describe the activity.
     "userSession": null, // Id of an userSession when the activity is linked to coaching content
     "correctedElevation": true, // internal flag when the elevation is corrected by satelite data
     "images": [], //collection of url images added to the activity
-    "thumbnail": "https://linkdata-ressources-eu2.geonaute.com/prod/820d0a384a7013997f69/maps/eu2cbe4bbb24082fd9ad.png", // thumbnail generated
+    "thumbnail": "https://linkdata-ressources-eu2.geonaute.com/prod/820d0XXXXXa7013969/maps/eu2cbe4bbb24082fd9ad.png", // thumbnail generated
     "trackFlag": true, // is the activity has a GPS track
     "datastreamFlag": true, // is the activity has a dataStream
     "globalChallenge": null, // if linked to a Decathlon global challenge
