@@ -371,7 +371,7 @@ You can also get an activity in GPX or TCX format.
 curl -X GET \
     https://api-eu.decathlon.net/sportstrackingdata/v2/activities/{{ACTIVITY_TOKEN}} \
   -H 'Authorization: Bearer {your bearer}' \
-  -H 'Accept: application/gcx+xml' \
+  -H 'Accept: application/gpx+xml' \
   -H 'x-api-key: {your api key}'
 ```
 
@@ -388,7 +388,7 @@ curl -X GET \
 
 ### Header accept for GPX
 
-`Accept: application/gcx+xml`
+`Accept: application/gpx+xml`
 
 
 
