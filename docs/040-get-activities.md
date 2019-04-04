@@ -111,3 +111,4 @@ status 5xx : Server errors, check response for details.
 
 ## Filters
 You could apply many filter on this request, for example an interval of date, a sport id, ...
+

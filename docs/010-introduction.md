@@ -26,3 +26,4 @@ An API to serve 3 key concepts for **quantified self**
 * Opening to the world the **connected sport**
 * Embracing diversity
 * Nurturing the sport practice ecosystem
+

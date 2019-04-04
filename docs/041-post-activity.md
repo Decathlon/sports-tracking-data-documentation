@@ -210,3 +210,4 @@ status 5xx : Server errors, check response for details.
 ...Etc.
 
 These abstractions allow to manipulate any sports with any data. (Tennis, running, swimming, golf, etc.)
+

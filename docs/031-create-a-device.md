@@ -15,6 +15,7 @@ This page shows you how to create a new device for an user.
 `POST https://api-eu.decathlon.net/sportstrackingdata/v2/user_devices`
  
 > Request body 
+
 ```json
 {
   "serial": "serialnumber123456",

@@ -12,3 +12,4 @@
 * Measure : A body measure stored for an user, the measure is defined by a Datatype, a value and a date 
 * Sport id : our abstraction of the list of the sports (ex : 121 for the running, 113 for walking...)
 * Sumup : any data consolidated to a datatype, a sport and a period (month or year)
+

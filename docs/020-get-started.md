@@ -60,14 +60,15 @@ After the user login, the user will be redirected to :
 
 `https://YOUR_REDIRECT_URL?code=XXXXXXXXXX`
 
-Collect the code on your server side and validate it with :
+Collect the code on your server side and validate it. You will receive an access_token in return.
 
 ```shell
 curl -X GET \
   'https://account.geonaute.com/oauth/accessToken?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URL&client_secret=CLIENT_ID_SECRET&code=THE_USER_CODE&grant_type=authorization_code'
 ``` 
 
-You will receive an access_token in return :
+
+> Answer 
 
 ```json
 {
