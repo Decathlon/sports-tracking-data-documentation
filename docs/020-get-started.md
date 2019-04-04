@@ -77,12 +77,14 @@ curl -X GET \
 ```
 
 ### Get JWT bearer
+
 With the Access token you could get a JWT bearer with a validity of 15 minutes. This bearer will be required for almost all API calls to Sports Tracking Data.
 
 ```shell
 curl -X GET \
   'https://account.geonaute.com/api/me?access_token=ACCESS_TOKEN'
 ``` 
+
 
 > Answer 
 
