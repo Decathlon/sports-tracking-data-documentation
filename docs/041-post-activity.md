@@ -211,3 +211,6 @@ status 5xx : Server errors, check response for details.
 
 These abstractions allow to manipulate any sports with any data. (Tennis, running, swimming, golf, etc.)
 
+## Limitations
+* You can not POST an activity with a payload size bigger than 3 Mo.
+
