@@ -183,6 +183,82 @@ status 5xx : Server errors, check response for details.
 ```
 
 
+## Main sports list
+
+Here we provide an extract from the sport referencial to give you a preview of the sports and their IDs.
+
+
+Id | Sport name
+--------- | -----------
+7 | Paragliding 
+ 10 | Basketball
+ 13 | Football
+ 18 | Handball
+ 20 | Hockey
+ 27 | Rugby 
+ 32 | Volleyball
+ 35 | Boxing
+ 45 | Martial arts
+ 77 | Triathlon 
+ 79 | Dancing 
+ 91 | Fitness 
+ 98 | Indoor weight training
+105 | Yoga
+109 | Pilates 
+110 | Indoor fitness bike 
+113 | Walking 
+114 | Nordic walking
+121 | Running 
+126 | Trail 
+127 | Orientation racing
+153 | Mountaineering
+161 | Climbing
+168 | Hiking
+173 | Snow-shoeing
+174 | Skiing
+176 | Alpine skiing 
+177 | Back country skiing 
+183 | Alternative Nordic skiing 
+184 | Nordic skating
+185 | Snowboarding
+200 | Horse riding
+260 | Aqua gym sessions 
+263 | Rowing
+264 | Bodyboarding
+265 | Canoeing and kayaking 
+273 | Kite surfing
+274 | Swimming
+280 | Wind surfing
+284 | Underwater diving 
+296 | Surfing 
+301 | Sailing 
+320 | Golf
+326 | Archery 
+335 | Badminton 
+340 | Padel 
+354 | Squash
+357 | Tennis
+358 | Table tennis
+360 | BMX 
+366 | Land sailing
+367 | Inline skating
+374 | Skateboarding 
+380 | Scooter 
+381 | Bicycle 
+385 | Road cycling
+388 | Mountain biking 
+395 | Treadmill 
+397 | Cross trainer 
+398 | Rowing machine
+399 | Run & Bike
+400 | Stand up paddle boarding
+401 | Home Trainer
+402 | Daily activity
+403 | Zumba 
+404 | Cross training
+405 | Jumping rope
+
+
 
 ## Connected products referentials
 
