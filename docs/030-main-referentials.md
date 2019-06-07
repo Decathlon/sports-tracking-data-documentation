@@ -12,6 +12,38 @@ Each time you refer to a sport, you have to indicate the ressource id which refe
 In same manner, Datatype is the referential of each units and measures of Sports Data. Example : Distance, Duration, Speed Current, Speed average, Speed max, elevation, body weight, body height...
 
 
+## Main datatypes
+Here we provide a top 25 extract from datatypes referencial used to give you a preview of the list.
+
+
+Id | unit | label | cumulable | recordWay 
+--------- | ----------- | ----------- | ----------- | -----------
+99 | Ons | Points earned | 1 | 1
+24 | s | Duration | 1 | 1
+5 | m | Distance | 1 | 1
+23 | kcal | Calories burnt | 1 | 1
+9 | m/h | Speed avg |  | 1
+6 | m/h | Speed current |  | 0
+18 | m | Ascent | 1 | 1
+19 | m | Descent | 1 | 1
+16 | m | Elevation min |  | 0
+15 | m | Elevation max |  | 1
+14 | m | Elevation current |  | 0
+36 |  | Mode |  | 0
+4 | bpm | HR avg |  | 0
+7 | m/h | Speed max |  | 1
+3 | bpm | HR max |  | 1
+1 | bpm | HR current |  | 0
+20 | bool | Lap |  | 0
+17 | m | Elevation avg |  | 0
+10 | steps/min | Cadence current |  | 0
+177 |  | Bike trainer resistance |  | 0
+207 |  | Avg Bike Trainer Resistance |  | 0
+206 |  | Avg Bike Trainer Resistance |  | 1
+103 | rpm | RPM avg |  | 1
+101 | rpm | RPM max |  | 0
+100 | rpm | RPM current |  | 0
+
 
 ## Example with Sport referential
 
@@ -190,73 +222,50 @@ Here we provide an extract from the sport referencial to give you a preview of t
 
 Id | Sport name
 --------- | -----------
-7 | Paragliding 
- 10 | Basketball
- 13 | Football
- 18 | Handball
- 20 | Hockey
- 27 | Rugby 
- 32 | Volleyball
- 35 | Boxing
- 45 | Martial arts
- 77 | Triathlon 
- 79 | Dancing 
- 91 | Fitness 
- 98 | Indoor weight training
-105 | Yoga
-109 | Pilates 
-110 | Indoor fitness bike 
-113 | Walking 
-114 | Nordic walking
-121 | Running 
-126 | Trail 
-127 | Orientation racing
-153 | Mountaineering
-161 | Climbing
-168 | Hiking
-173 | Snow-shoeing
-174 | Skiing
-176 | Alpine skiing 
-177 | Back country skiing 
-183 | Alternative Nordic skiing 
-184 | Nordic skating
-185 | Snowboarding
-200 | Horse riding
-260 | Aqua gym sessions 
-263 | Rowing
+176 | Alpine skiing
+183 | Alternative Nordic skiing
+260 | Aqua gym sessions
+326 | Archery
+177 | Back country skiing
+335 | Badminton
+10 | Basketball
+381 | Bicycle
+360 | BMX
 264 | Bodyboarding
-265 | Canoeing and kayaking 
-273 | Kite surfing
-274 | Swimming
-280 | Wind surfing
-284 | Underwater diving 
-296 | Surfing 
-301 | Sailing 
-320 | Golf
-326 | Archery 
-335 | Badminton 
-340 | Padel 
-354 | Squash
-357 | Tennis
-358 | Table tennis
-360 | BMX 
-366 | Land sailing
-367 | Inline skating
-374 | Skateboarding 
-380 | Scooter 
-381 | Bicycle 
-385 | Road cycling
-388 | Mountain biking 
-395 | Treadmill 
-397 | Cross trainer 
-398 | Rowing machine
-399 | Run & Bike
-400 | Stand up paddle boarding
-401 | Home Trainer
-402 | Daily activity
-403 | Zumba 
+35 | Boxing
+265 | Canoeing and kayaking
+161 | Climbing
+397 | Cross trainer
 404 | Cross training
+402 | Daily activity
+79 | Dancing
+91 | Fitness
+13 | Football
+320 | Golf
+18 | Handball
+168 | Hiking
+20 | Hockey
+401 | Home Trainer
+200 | Horse riding
+110 | Indoor fitness bike
+98 | Indoor weight training
+367 | Inline skating
 405 | Jumping rope
+273 | Kite surfing
+366 | Land sailing
+45 | Martial arts
+388 | Mountain biking
+153 | Mountaineering
+184 | Nordic skating
+114 | Nordic walking
+127 | Orientation racing
+340 | Padel
+7 | Paragliding
+109 | Pilates
+385 | Road cycling
+263 | Rowing
+398 | Rowing machine
+27 | Rugby
 
 
 
