@@ -266,6 +266,29 @@ Id | Sport name
 263 | Rowing
 398 | Rowing machine
 27 | Rugby
+399 | Run & Bike
+121 | Running
+301 | Sailing
+380 | Scooter
+374 | Skateboarding
+174 | Skiing
+173 | Snow-shoeing
+185 | Snowboarding
+354 | Squash
+400 | Stand up paddle boarding
+296 | Surfing
+274 | Swimming
+358 | Table tennis
+357 | Tennis
+126 | Trail
+395 | Treadmill
+77 | Triathlon
+284 | Underwater diving
+32 | Volleyball
+113 | Walking
+280 | Wind surfing
+105 | Yoga
+403 | Zumba
 
 
 
