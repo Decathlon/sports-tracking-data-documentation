@@ -22,3 +22,4 @@ And/Or :
 
 ### Terms of service
 [Terms of service](https://developers.decathlon.com/tos)
+
