@@ -7,7 +7,7 @@ Thanks to this, you will be able to know the usage of your equipments on 3 eleme
 * Duration
 * Number of session
 
-We provide 4 categories (shoes, bikes, rackets, other).
+We provide 4 categories (shoes, bike, racquet, other).
 
 You can link an equipment to a single or multiple sports.
 
