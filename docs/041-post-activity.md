@@ -31,7 +31,8 @@ To construct the body of our activity, you will need to describe the activity, n
     "device":{
         "firmware":59,
         "model":17,
-        "sn":"androidapp-f72c681e8442049956db"
+        "serial":"androidapp-f72c681e8442049956db",
+        "user":"/v2/users/{{user_id}}"
     },
     "manual":"false"
     },
