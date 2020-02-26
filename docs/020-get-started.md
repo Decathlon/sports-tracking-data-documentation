@@ -1,6 +1,6 @@
 # Get started
 
-API for quantified self and connected products : Sport activities, statistics & body measures
+API for quantified self and connected products : Sport activities, statistics , body measures & equipments
 
 
 ## API conventions 
@@ -41,12 +41,11 @@ You can find a Swagger UI <a href="swagger.htm" target="_blank">here</a>.
 
 ## Authentification
 
-Sports Tracking Data is a ressource server, the identification and authorization role is assumed by *Geonaute Account* (it will be replaced during 2019 by Decathlon Login).
-Geonaute Account supports Oauth V2.
+Sports Tracking Data is a ressource server, the identification and authorization role is assumed by *Decathlon Login*.
 
 Flow supported :
 
-* Code flow
+* Authorization code
 
 To get a client ID, contact **infra@decathloncoach.com**
 
@@ -54,17 +53,18 @@ To get a client ID, contact **infra@decathloncoach.com**
 
 Create a login button with this link: 
 
-`https://account.geonaute.com/oauth/authorize?response_type=code&client_id=YOUR_CLIENT_ID&redirect_uri=https://YOUR_REDIRECT_URL`
+`https://api-eu.decathlon.net/connect/oauth/authorize?client_id=YOUR_CLIENT_ID&locale=fr_FR&redirect_uri=YOUR_REDIRCT_URI&response_type=code&state=123454&scope=profile+openid+email`
+
 
 After the user login, the user will be redirected to :
 
 `https://YOUR_REDIRECT_URL?code=XXXXXXXXXX`
 
-Collect the code on your server side and validate it. You will receive an access_token in return.
+Collect the code on your server side and validate it. You will receive bearer in return :
 
 ```shell
-curl -X GET \
-  'https://account.geonaute.com/oauth/accessToken?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URL&client_secret=CLIENT_ID_SECRET&code=THE_USER_CODE&grant_type=authorization_code'
+curl -X POST \
+  'https://api-eu.decathlon.net/connect/oauth/token?client_id=YOUR_CLIENT_ID&client_secret=CLIENT_ID_SECRET&grant_type=authorization_code&code=THE_USER_CODE&redirect_uri=https://YOUR_REDIRECT_URL' \
 ``` 
 
 
@@ -72,57 +72,14 @@ curl -X GET \
 
 ```json
 {
-  'access_token' : 'XXXXXXXXX'
+    "access_token": "eyJhbGciOiJSUzI1NEnR5cCI6IkpXVCJ9.eyJzdWIiOiI1YWIxMjY3OC1hYzhmLTRkM2YtOTMzOC02NTJlNzkxZGMyZWEiLCJzY29wZSI6WyJwcm9maWxlIl0sImlzcyI6ImRrY29ubmVjdC5vcmciLCJkYXX2NlbnRlciI6IkVVIiwicGVyc29uaWQiOiI1MDAwMDIzNDcwMSIsImV4cCI6MTU0NTEyNjA2NCwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6IjgxOTgxMTllLWQ4YjktNDc1ZC04MTlmLWExYTQyYWQ5YzNkMCIsImNsaWVudF9pZCI6ImRrY29ubmVjdCJ9.HGNlzYh_mlAmdazSMejNd2totNYChUZ33oZUHo27L_xfWR-C_b8-IUg-MKC0w-Or6zahifqJN5y1NfNlqrsLrAWXFg-ZDAyUYgec3kQmRaFG1AgLFUjwsCvGSYcIGY41PHM0WKRENyU_oDL7bN9AjaOLe3Ob-c2BRWBQu6a5W6fmqugQ28ZFLTGDUTcIcsOdTg0DqBU82B_CjsVrK_x1gLM4y2ozkXJ_OmvCl5CjNsvaYJHKANl8gA5TQgX7IaUAwf7YNcun_rnO1k-FeYoc_OLHWIQG1UDrbDrtUUH-WQo7AE9X5BhgzXjWd1rubv703nbq6RP3BeeoeoJIDQ",
+    "token_type": "bearer",
+    "refresh_token": "XXX",
+    "expires_in": 899,
+    "scope": "XXX",
+    "jti": "XXX"
 }
 ```
-
-### Get JWT bearer
-
-With the Access token you could get a JWT bearer with a validity of 15 minutes. This bearer will be required for almost all API calls to Sports Tracking Data.
-
-```shell
-curl -X GET \
-  'https://account.geonaute.com/api/me?access_token=ACCESS_TOKEN'
-``` 
-
-
-> Answer 
-
-```json
-{
-    "email": "arthur@dent.com",
-    "firstName": "Arthur",
-    "gender": "male",
-    "birthdate": 631238400000,
-    "lastName": "Dent",
-    "created": 1469717300448,
-    "ldid": "HERE_THE_UNIQ_ID_FOR_SPORTS_TRACKING_DATA",
-    "requestKey": "HERE_THE_JWT_bearer"
-}
-```
-
-
-
-### JWT payload structure
-
-```json
-{
-  "iss": "account.geonaute.com",
-  "exp": 1504793223,
-  "iat": 1504789623,
-  "ldid": "dfdc03c5bXXXX",
-  "stack": "eu1",
-  "firstname": "Arthur",
-  "lastname": "Dent",
-  "email": "arthur@dent.com",
-  "gender": "Male",
-  "birthdate": "1990-01-01",
-  "country": "FR"
-}
-```
-
-Note the *ldid* field which is the Sports Tracling Data identification. It will serve in a lot of api calls as parameter.
-
 
 
 
@@ -155,21 +112,23 @@ curl -X GET \
 ```json
 {
     "@context": "/v2/contexts/User",
-    "@id": "/v2/users/ed3a20dfabaa09ae73f6",
+    "@id": "/v2/users/YOUR_LDID",
     "@type": "User",
-    "id": "ed3a20dfabaa09ae73f6",
-    "oneId": null,
+    "id": "YOUR_LDID
+    "personId": "YOUR_PERSON_ID",
     "gender": 1,
     "roles": [
         "ROLE_USER"
     ],
     "language": "fr",
-    "country": "BE",
-    "imageUrl": "https://d1v3pubopekoj.cloudfront.net/prod/people/f0f31a5a71584076c6.png",
-    "birthDate": "1984-07-27",
-    "createdAt": "2013-03-09T16:39:53+00:00",
-    "updatedAt": "2017-12-18T09:43:43+00:00",
-    "scheduleDelete": null
+    "country": "fr",
+    "imageUrl": null,
+    "birthDate": "1990-10-24",
+    "scheduleDelete": null,
+    "createdAt": "2019-03-18T13:07:02+00:00",
+    "updatedAt": "2020-02-26T10:11:58+00:00",
+    "monthlyActivityMail": true,
+    "unit": "metric"
 }
 ```
 

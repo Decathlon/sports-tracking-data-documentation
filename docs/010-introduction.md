@@ -1,10 +1,11 @@
 # API Description
 
-An API to serve 3 key concepts for **quantified self**
+An API to serve 4 key concepts for **quantified self**
 
 * Sport activity tracking
 * Body measures
 * Personal statistics
+* Equipments
 
 
 <div markdown="1">

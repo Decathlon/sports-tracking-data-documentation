@@ -176,31 +176,33 @@ We find here all the field to basically describe the activity.
 ```json
 {
     "@context": "/v2/contexts/Activity",
-    "@id": "/v2/activities/eu2cbe4bbb24082fd9ad",
+    "@id": "/v2/activities/eu2a32c58982e074eb4a",
     "@type": "Activity",
-    "id": "eu2cbe4bbb24082fd9ad",
-    "name": "Biking 2019-02-12 14:07",
-    "user": "/v2/users/820d0XXXXXa7013969",
-    "sport": "/v2/sports/381",// sport of the activity
+    "id": "eu2a32c58982e074eb4a",
+    "name": "Course à pied - 02/01/2020",
+    "user": "/v2/users/dfdc03c5bcddd459f170", // sport of the activity
+    "sport": "/v2/sports/121", // sport of the activity
     "userDevice": null, // Decathlon user device id, required if the activity is not manual
-    "startdate": "2019-02-12T14:07:33+00:00", // datetime of the start of the activity
-    "duration": 8311, // total duration in seconds
-    "latitude": 50.741407871246, //first GPS points if exists
-    "longitude": 3.2376379240304,
-    "elevation": 35,
-    "manual": true, // the activity is considered as manual when there is no Decathlon device declared
+    "startdate": "2020-01-02T12:29:46+01:00", // datetime of the start of the activity
+    "duration": 4008, // total duration in seconds
+    "latitude": 50.6292217, //first GPS points if exists
+    "longitude": 3.06597,
+    "elevation": 28.600586,
+    "manual": false, // the activity is considered as manual when there is no Decathlon device declared
     "comment": null, // user comment on his activity
-    "connector": null, // Decathlon Connector id, required if the activity is not manual
+    "connector": "/v2/connectors/801", // Decathlon Connector id, required if the activity is not manual
     "userSession": null, // Id of an userSession when the activity is linked to coaching content
     "correctedElevation": true, // internal flag when the elevation is corrected by satelite data
     "images": [], //collection of url images added to the activity
-    "thumbnail": "https://linkdata-ressources-eu2.geonaute.com/prod/820d0XXXXXa7013969/maps/eu2cbe4bbb24082fd9ad.png", // thumbnail generated
+    "thumbnail": "https://XXXXXX", // thumbnail generated
     "trackFlag": true, // is the activity has a GPS track
     "datastreamFlag": true, // is the activity has a dataStream
-    "globalChallenge": null, // if linked to a Decathlon global challenge
-    "createdAt": "2019-02-28T14:01:37+00:00",
-    "updatedAt": "2019-02-28T14:01:40+00:00",
-    "tags": [] // collection of user tag attached to the activity
+    "globalChallenges": [], // if linked to a Decathlon global challenge
+    "equipments": [], // equipments used during the activity
+    "tags": [], // collection of user tag attached to the activity
+    "createdAt": "2020-01-06T09:15:31+00:00",
+    "updatedAt": "2020-01-06T09:15:33+00:00"
+}
 ```
 
 ## Zoom on dataSummaries
