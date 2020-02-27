@@ -6,11 +6,12 @@ The documentation is built with a Slate template and hosted on <https://develope
 
 ## Sports Tracking Data API description
 
-An API to serve 3 key concepts for quantified self :
+An API to serve 4 key concepts for quantified self :
 
 * Sport activity tracking
 * Body measures
 * Personal statistics
+* Equipments
 
 We use at Decathlon this API to store all the activities saved by our app Decathlon Coach (Androïd & iOs) and connected devices like OnMove (200, 500,...), Domyos e-bike and threadmill.
 This API is also the backend of our connected balance scale 700.
