@@ -7,8 +7,10 @@ The v1 is supported until 2020. The v1 doesn't receive the new features.
 
 ## V2 new features
 
-* Kcal refactoring 2019-Q1
-* Callback / webhook 2019-Q1
-* Connected Cloackroom 2019-Q2
-* Change the Oauth server 2019-Q3
+* Change the Oauth server : DECATHLON Login 2020-Q1
+* Gzip import activity POST 2020-Q1
+* Rework on program scheduling persistance 2020-Q2
+* VMA prediction 2020-Q3
+* Record prediction 2020-Q3
+
 
