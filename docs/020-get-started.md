@@ -53,7 +53,12 @@ To get a client ID, contact **infra@decathloncoach.com**
 
 Create a login button with this link: 
 
-`https://api-eu.decathlon.net/connect/oauth/authorize?client_id=YOUR_CLIENT_ID&locale=fr_FR&redirect_uri=YOUR_REDIRCT_URI&response_type=code&state=123454&scope=profile+openid+email`
+`https://api-eu.decathlon.net/connect/oauth/authorize?client_id=YOUR_CLIENT_ID&locale=fr_FR&redirect_uri=YOUR_REDIRCT_URI&response_type=code&state=123454&scope=profile+openid+email+sports_tracking_data`
+
+To be able to log-in you will need to create an application to use Decathlon Login : https://dktunited.github.io/dktconnect-login-doc/ 
+
+If you want to be able to write data you will need to add the scope : sports_tracking_data:write
+
 
 
 After the user login, the user will be redirected to :
