@@ -20,7 +20,7 @@ This page shows you how to create a new device for an user.
 {
   "serial": "serialnumber123456",
   "model": "/v2/device_models/1",
-  "firmware": "/v2/firmwares/1",
+  "firmware": "/v2/firmware/1",
   "user": "/v2/users/{{user_id}}",
   "ownership": 0,
   "lastConnectedAt": "2018-04-16T16:05:11.896Z"
@@ -44,7 +44,7 @@ curl -X POST \
   -d '{
   "serial": "serialnumber123456",
   "model": "/v2/device_models/1",
-  "firmware": "/v2/firmwares/1",
+  "firmware": "/v2/firmware/1",
   "user": "/v2/users/{{user_id}}",
   "ownership": 0,
   "lastConnectedAt": "2018-04-16T16:05:11.896Z"
@@ -65,7 +65,7 @@ status 201 : Created
     "id": "eu271ed863164e25fb3d",
     "serial": "serialnumber123456",
     "model": "/v2/device_models/1",
-    "firmware": "/v2/firmwares/1",
+    "firmware": "/v2/firmware/1",
     "user": "/v2/users/820d0XXXXXa7013969",
     "ownership": 0,
     "lastConnectedAt": "2018-04-16T16:05:11+00:00",

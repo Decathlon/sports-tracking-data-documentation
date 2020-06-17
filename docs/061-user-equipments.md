@@ -10,6 +10,8 @@ Thanks to this, you will be able to know the usage of your equipments on 3 eleme
 We provide 4 categories (shoes, bike, racquet, other).
 
 You can link an equipment to a single or multiple sports.
+A sport can only have 1 equipment by category linked (1 pair of shoes, 1 bike, or 1 racket). 
+For example if you're linking an new shoes to Running, who already had a default shoes, your new one will replace the previous one.
 
 After doing a sport activity, your activity's sum-up (Distance, Duration, Number of session) will be added to your equipment(s).
 
@@ -29,6 +31,7 @@ After doing a sport activity, your activity's sum-up (Distance, Duration, Number
     "category": "shoes",
     "brand": "Kalenji",
     "name": "KIPRUN KS LIGHT 2",
+    "startDate": "2020-06-12T09:18:00+00:00",
     "sportsAutoAssigned": [
         "/v2/sports/{sportId}"
     ]
@@ -53,6 +56,7 @@ curl -X POST \
     "category": "shoes",
     "brand": "Kalenji",
     "name": "KIPRUN KS LIGHT 2",
+    "startDate": "2020-06-12T09:18:00+00:00",
     "sportsAutoAssigned": [
         "/v2/sports/{sportId}"
     ]
@@ -75,6 +79,7 @@ status 201 : Created
     "category": "shoes",
     "brand": "KALENJI",
     "name": "KIPRUN KS LIGHT 2",
+    "startDate": "2020-06-12T09:18:00+00:00",
     "sumups": [],
     "sportsAutoAssigned": [
         {
@@ -108,6 +113,11 @@ status 5xx : Server errors, check response for details.
 ## Autocomplete 
 
 To simplify equipment's creation we propose an autocompletion API.
+You can use parameters on URL to optimize the result :
+
+`/autocomplete/name/air?brand=NIKE`
+
+`/autocomplete/brand/KALE?type=shoes`
 
 
 > Curl

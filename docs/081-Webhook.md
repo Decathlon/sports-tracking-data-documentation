@@ -62,24 +62,24 @@ status 5xx : Server errors, check response for details.
 
 ```json
 {
-    "user_id":"ed3a20dfabaf09ae73f6",
+    "user_id":"user_id",
     "event":{
         "name":"activity_create",
-        "ressource_id":"eu2f21a9d01104a7bbe9",
+        "ressource_id":"activity_id",
         "event_time":1552944296
         }
 }
 ```
 
 
-The equivalent request made by Sports Tracking Data to your webhook url.
+The equivalent request made by Sports Tracking Data to your webhook url with HTTP Code 200 .
 
 > Curl
 
 ```shell
 curl -X POST \
   https://XXXXXXX.com/webhook_callback \
-  -d '{"user_id":"ed3a20dfabaf09ae73f6","event":{"name":"activity_create","ressource_id":"eu2f21a9d01104a7bbe9","event_time":1552944296}}'
+  -d '{"user_id":"user_id","event":{"name":"activity_create","ressource_id":"activity_id","event_time":1552944296}}'
 ```
 
 

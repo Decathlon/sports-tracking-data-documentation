@@ -1,3 +1,4 @@
+
 # Get started
 
 API for quantified self and connected products : Sport activities, statistics , body measures & equipments
@@ -21,12 +22,9 @@ Language codes follow the [norme ISO 639-1](https://en.wikipedia.org/wiki/List_o
 ## API Registration
 
 
-Our self service developer portal is not yet ready. First contact infra@decathloncoach.com with information :
+**You want to use our API ? First filled** [this form](https://forms.gle/4WKN7ihQBpyzMt389) :
 
-* name of your application
-* purpose of your application
-* an url for the callback Oauthv2 flow authorization code
-* a logo of your application
+
 
 If we validate your application, you will receive :
 
@@ -42,12 +40,14 @@ You can find a Swagger UI <a href="swagger.htm" target="_blank">here</a>.
 ## Authentification
 
 Sports Tracking Data is a ressource server, the identification and authorization role is assumed by *Decathlon Login*.
+Full documentation about Decathlon Login available <a href="https://dktunited.github.io/dktconnect-login-doc/index.html" target="_blank">here</a>.
+
 
 Flow supported :
 
 * Authorization code
+* Implicit flow
 
-To get a client ID, contact **infra@decathloncoach.com**
 
 ### Login flow Authorization Code
 
@@ -134,15 +134,3 @@ curl -X GET \
 
 Congratulations ! You executed your first request to know your basic settings of you user account.
 Now you will be able to add sport activities and get them by API.
-
-
-
-
-
-
-
-
-
-
-
-
