@@ -1,0 +1,18 @@
+{
+    "version": 1,
+    "documentation": {
+      "pages": [
+        {
+          "src": "/docs/010-introduction.md",
+          "dest": "/my/new/dir/",
+          "name": "Homepage",
+          "homepage": true
+        },
+        {
+          "src": "/docs/020-get-started.md",
+          "dest": "/my/new/dir/",
+          "name": "Business"
+        }
+      ]
+    }
+  }
