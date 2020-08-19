@@ -1,6 +1,6 @@
 'use strict';
 
-window.onload = () => {
+window.onload = function() {
     manageWebbyDisplay();
 
     new MutationObserver(function (mutations, self) {
@@ -45,6 +45,7 @@ window.onload = () => {
         spec: data.spec,
         dom_id: '#swagger-ui',
         validatorUrl: null,
+        oauth2RedirectUrl: data.oauth.redirectUrl,
         presets: [
             SwaggerUIBundle.presets.apis,
             SwaggerUIStandalonePreset,
