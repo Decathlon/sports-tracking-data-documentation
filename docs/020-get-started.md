@@ -37,6 +37,16 @@ If we validate your application, you will receive :
 You can find a Swagger UI <a href="swagger.htm" target="_blank">here</a>.
 
 
+## Endpoints and stacks
+
+We have two major stacks, one in Europe (the default) and one in China (dedicated to the Chinese users).
+The default endpoint is : https://api-global.decathlon.net/sportstrackingdata/v2/
+You can also specify the Europe stack by adding a prefix "eu2" : https://api-global.decathlon.net/sportstrackingdata/eu2/v2/sports.json
+
+To reach the Chinese stack, add the prefix cn1 : https://api-global.decathlon.net/sportstrackingdata/cn1/v2/
+
+
+
 ## Authentification
 
 Sports Tracking Data is a ressource server, the identification and authorization role is assumed by *Decathlon Login*.
