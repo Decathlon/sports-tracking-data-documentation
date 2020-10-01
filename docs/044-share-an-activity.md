@@ -15,7 +15,7 @@ Firstly, you need the URI of the activity that you want to share, example :
 
 ### Request
 
-`GET https://api-eu.decathlon.net/sportstrackingdata/v2/share_activities`
+`GET https://api-global.decathlon.net/sportstrackingdata/v2/share_activities`
  
 
 ### Request Body
@@ -33,7 +33,7 @@ Firstly, you need the URI of the activity that you want to share, example :
 
 ```shell
 curl -X POST \
-    https://api-eu.decathlon.net/sportstrackingdata/v2/share_activities \
+    https://api-global.decathlon.net/sportstrackingdata/v2/share_activities \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \
@@ -172,7 +172,7 @@ Thank to the new share URI : "/v2/share_activities/eu244e2e987f749dbde5" you wil
 
 ```shell
 curl -X GET \
-  https://api-eu.decathlon.net/sportstrackingdata/v2/share_activities/eu244e2e987f749dbde5 \
+  https://api-global.decathlon.net/sportstrackingdata/v2/share_activities/eu244e2e987f749dbde5 \
   -H 'Accept: application/ld+json, application/json, text/html' 
   -H 'x-api-key: {your api key}' \
 ```

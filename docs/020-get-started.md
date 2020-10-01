@@ -69,7 +69,7 @@ Flow supported :
 
 Create a login button with this link: 
 
-`https://api-eu.decathlon.net/connect/oauth/authorize?client_id=YOUR_CLIENT_ID&locale=fr_FR&redirect_uri=YOUR_REDIRCT_URI&response_type=code&state=123454&scope=profile+openid+email+sports_tracking_data`
+`https://api-global.decathlon.net/connect/oauth/authorize?client_id=YOUR_CLIENT_ID&locale=fr_FR&redirect_uri=YOUR_REDIRCT_URI&response_type=code&state=123454&scope=profile+openid+email+sports_tracking_data`
 
 To be able to log-in you will need to create an application to use Decathlon Login : https://dktunited.github.io/dktconnect-login-doc/ 
 
@@ -85,7 +85,7 @@ Collect the code on your server side and validate it. You will receive bearer in
 
 ```shell
 curl -X POST \
-  'https://api-eu.decathlon.net/connect/oauth/token?client_id=YOUR_CLIENT_ID&client_secret=CLIENT_ID_SECRET&grant_type=authorization_code&code=THE_USER_CODE&redirect_uri=https://YOUR_REDIRECT_URL' \
+  'https://api-global.decathlon.net/connect/oauth/token?client_id=YOUR_CLIENT_ID&client_secret=CLIENT_ID_SECRET&grant_type=authorization_code&code=THE_USER_CODE&redirect_uri=https://YOUR_REDIRECT_URL' \
 ``` 
 
 
@@ -114,13 +114,13 @@ The main API operations are :
 
 ## The first call
 
-`GET https://api-eu.decathlon.net/sportstrackingdata/v2/me/`
+`GET https://api-global.decathlon.net/sportstrackingdata/v2/me/`
 
 > Curl
 
 ```shell
 curl -X GET \
-    https://api-eu.decathlon.net/sportstrackingdata/v2/me/ \
+    https://api-global.decathlon.net/sportstrackingdata/v2/me/ \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \

@@ -20,7 +20,7 @@ After doing a sport activity, your activity's sum-up (Distance, Duration, Number
 
 ### Request
 
-`POST https://api-eu.decathlon.net/sportstrackingdata/v2/user_equipments`
+`POST https://api-global.decathlon.net/sportstrackingdata/v2/user_equipments`
  
 
 > Request Body
@@ -124,7 +124,7 @@ You can use parameters on URL to optimize the result :
 
 ```shell
 curl -X GET \
-    https://api-eu.decathlon.net/sportstrackingdata/v2/user_equipments/autocomplete/brand/KAL \
+    https://api-global.decathlon.net/sportstrackingdata/v2/user_equipments/autocomplete/brand/KAL \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' 
@@ -141,9 +141,9 @@ It will propose, according to what user wrote, an existing products list (for br
 
  Request
 
-`POST https://api-eu.decathlon.net/sportstrackingdata/autocomplete/brand/{caracters}`
+`POST https://api-global.decathlon.net/sportstrackingdata/autocomplete/brand/{caracters}`
 
-`POST https://api-eu.decathlon.net/sportstrackingdata/autocomplete/name/{caracters}`
+`POST https://api-global.decathlon.net/sportstrackingdata/autocomplete/name/{caracters}`
 
 ## Get user equipments
 
@@ -151,7 +151,7 @@ It will propose, according to what user wrote, an existing products list (for br
 
 ```shell
 curl -X GET \
-    https://api-eu.decathlon.net/sportstrackingdata/v2/user_equipments?user={userId} \
+    https://api-global.decathlon.net/sportstrackingdata/v2/user_equipments?user={userId} \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' 
@@ -287,7 +287,7 @@ You can modify an equipment. For exemple if you want to change or add an auto as
 
 ### Request
 
-`PUT https://api-eu.decathlon.net/sportstrackingdata/v2/user_equipments/{equipmentId}`
+`PUT https://api-global.decathlon.net/sportstrackingdata/v2/user_equipments/{equipmentId}`
  
 
 > Request Body
@@ -304,7 +304,7 @@ You can modify an equipment. For exemple if you want to change or add an auto as
 
 ```shell
 curl -X PUT \
-  https://api-eu.decathlon.net/sportstrackingdata/v2/user_equipments/{equipmentId} \
+  https://api-global.decathlon.net/sportstrackingdata/v2/user_equipments/{equipmentId} \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' 
@@ -370,7 +370,7 @@ You can delete an equipment. Every informations, and link with activities will b
 
 ```shell
 curl -X DELETE \
-  https://api-eu.decathlon.net/sportstrackingdata/v2/user_equipments/{equipmentId} \
+  https://api-global.decathlon.net/sportstrackingdata/v2/user_equipments/{equipmentId} \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' 
@@ -390,7 +390,7 @@ status 5xx : Server errors, check response for details.
 
 ### Request
 
-`DELETE https://api-eu.decathlon.net/sportstrackingdata/v2/user_equipments/{equipmentId}`
+`DELETE https://api-global.decathlon.net/sportstrackingdata/v2/user_equipments/{equipmentId}`
 
 
 ## Link an activity with an equipment
@@ -410,7 +410,7 @@ Here is an exemple of an activity (who is not link to an equipment), and I want 
 
 ### Request
 
-`PUT https://api-eu.decathlon.net/sportstrackingdata/v2/activities/{activityId}`
+`PUT https://api-global.decathlon.net/sportstrackingdata/v2/activities/{activityId}`
 
 > Curl
 
@@ -504,7 +504,7 @@ If you want to modify an activity who had already an equipment linked, you must 
 ```
 ### Request
 
-`PUT https://api-eu.decathlon.net/sportstrackingdata/v2/activities/{activityId}`
+`PUT https://api-global.decathlon.net/sportstrackingdata/v2/activities/{activityId}`
 
 You will need to indicated some URI ressources to modify your activity's equipment :
 

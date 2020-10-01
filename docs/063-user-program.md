@@ -20,7 +20,7 @@ The basic needs :
 
 ### Request
 
-`POST https://api-eu.decathlon.net/sportstrackingdata/v2/user_programs`
+`POST https://api-global.decathlon.net/sportstrackingdata/v2/user_programs`
  
 
 > Request Body
@@ -64,7 +64,7 @@ This method will automatically create your user program and your user sessions l
 
 ### Request
 
-`POST https://api-eu.decathlon.net/sportstrackingdata/v2/user_programs`
+`POST https://api-global.decathlon.net/sportstrackingdata/v2/user_programs`
  
 
 > Request Body
@@ -138,7 +138,7 @@ status 5xx : Server errors, check response for details.
 To retrieve every programs launched by the user :
 ### Request
 
-`GET https://api-eu.decathlon.net/sportstrackingdata/v2/user_programs`
+`GET https://api-global.decathlon.net/sportstrackingdata/v2/user_programs`
  
 
 > Response
@@ -275,7 +275,7 @@ To modify a program, exemple here, to declare that a program was finished by the
 
 ### Request
 
-`PUT https://api-eu.decathlon.net/sportstrackingdata/v2/user_programs/programID`
+`PUT https://api-global.decathlon.net/sportstrackingdata/v2/user_programs/programID`
  
 > Request Body
 
@@ -319,7 +319,7 @@ Activities done with this program will not be deleted. The filed userSession wil
 
 ### Request
 
-`DELETE https://api-eu.decathlon.net/sportstrackingdata/v2/user_programs/programID`
+`DELETE https://api-global.decathlon.net/sportstrackingdata/v2/user_programs/programID`
  
 
 > Response
