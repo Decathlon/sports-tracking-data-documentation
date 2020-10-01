@@ -46,6 +46,12 @@ You can also specify the Europe stack by adding a prefix "eu2" : https://api-glo
 To reach the Chinese stack, add the prefix cn1 : https://api-global.decathlon.net/sportstrackingdata/cn1/v2/
 
 
+## Quota and rate-limiting
+
+By default, we apply :
+* 100k api calls per day
+* 1k maximum burst calls/minute
+
 
 ## Authentification
 
