@@ -62,7 +62,6 @@ Full documentation about Decathlon Login available <a href="https://dktunited.gi
 Flow supported :
 
 * Authorization code
-* Implicit flow
 
 
 ### Login flow Authorization Code
