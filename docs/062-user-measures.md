@@ -268,3 +268,96 @@ status 5xx : Server errors, check response for details.
 
 ```
 
+## Get current user measures
+You can get user measures at a specific date.
+For exemple, if you want to get user measure at the 27 august 2020, you can do the following call, it will retrieve the closest (on the past) measures at this date saved by the user .
+
+> Curl
+
+```shell
+curl -X GET \
+    https://api-eu.decathlon.net/sportstrackingdata/v2/current_user_measures?date=2020-08-27 \
+  -H 'Authorization: Bearer {your bearer}' \
+  -H 'Content-Type: application/json' \
+  -H 'x-api-key: {your api key}' 
+```
+
+> Response
+
+```
+{
+    "@context": "/v2/contexts/User",
+    "@id": "/v2/users",
+    "@type": "hydra:Collection",
+    "hydra:member": [
+        {
+            "@id": "/v2/user_measures/764816",
+            "@type": "UserMeasure",
+            "datatype": "/v2/datatypes/3",
+            "value": 194,
+            "date": "2020-08-27T16:01:43+00:00",
+            "createdAt": "2020-08-27T16:01:43+00:00"
+        },
+        {
+            "@id": "/v2/user_measures/764818",
+            "@type": "UserMeasure",
+            "datatype": "/v2/datatypes/21",
+            "value": 55,
+            "date": "2020-08-27T16:02:35+00:00",
+            "createdAt": "2020-08-27T16:02:35+00:00"
+        },
+        {
+            "@id": "/v2/user_measures/764815",
+            "@type": "UserMeasure",
+            "datatype": "/v2/datatypes/22",
+            "value": 80,
+            "date": "2020-08-27T16:01:43+00:00",
+            "createdAt": "2020-08-27T16:01:43+00:00"
+        },
+        {
+            "@id": "/v2/user_measures/764813",
+            "@type": "UserMeasure",
+            "datatype": "/v2/datatypes/27",
+            "value": 165,
+            "date": "2020-08-27T16:01:42+00:00",
+            "createdAt": "2020-08-27T16:01:42+00:00"
+        },
+        {
+            "@id": "/v2/user_measures/764817",
+            "@type": "UserMeasure",
+            "datatype": "/v2/datatypes/28",
+            "value": 70,
+            "date": "2020-08-27T16:01:44+00:00",
+            "createdAt": "2020-08-27T16:01:44+00:00"
+        },
+        {
+            "@id": "/v2/user_measures/764814",
+            "@type": "UserMeasure",
+            "datatype": "/v2/datatypes/181",
+            "value": 80000,
+            "date": "2020-08-27T16:01:43+00:00",
+            "createdAt": "2020-08-27T16:01:43+00:00"
+        },
+        {
+            "@id": "/v2/user_measures/738995",
+            "@type": "UserMeasure",
+            "datatype": "/v2/datatypes/182",
+            "value": 55,
+            "date": "2019-04-25T07:52:07+00:00",
+            "createdAt": "2019-04-25T07:52:07+00:00"
+        },
+        {
+            "@id": "/v2/user_measures/762356",
+            "@type": "UserMeasure",
+            "datatype": "/v2/datatypes/217",
+            "value": 120,
+            "date": "2019-10-08T09:14:04+00:00",
+            "createdAt": "2019-10-08T09:14:04+00:00"
+        }
+    ],
+    "hydra:view": {
+        "@id": "/v2/users/a13babcabc378e8d007e/current_user_measures?date=2020-08-27",
+        "@type": "hydra:PartialCollectionView"
+    }
+}
+```

@@ -82,5 +82,7 @@ curl -X POST \
   -d '{"user_id":"user_id","event":{"name":"activity_create","ressource_id":"activity_id","event_time":1552944296}}'
 ```
 
+## Automatic purge
 
-
+To manage users who deleted their accounts on client side, a mecanism of purge is set :
+If client server side response is different than 2xx since more than 5 days, with minimum 3 consecutive times, the webhook will be deleted.
