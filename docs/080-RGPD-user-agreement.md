@@ -14,7 +14,7 @@ Each user agreement has a state ( accepted | pending | rejected ).
 
 ### Request
 
-`POST https://api-global.decathlon.net/sportstrackingdata/v2/user_agreements`
+`POST https://api.decathlon.net/sportstrackingdata/v2/user_agreements`
  
 
 
@@ -23,7 +23,7 @@ Each user agreement has a state ( accepted | pending | rejected ).
 
 ```shell
 curl -X POST \
-    https://api-global.decathlon.net/sportstrackingdata/v2/user_agreements \
+    https://api.decathlon.net/sportstrackingdata/v2/user_agreements \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \
@@ -70,9 +70,9 @@ You can list all the user agreements and access to specific one.
 
 ### Request
 
-`GET https://api-global.decathlon.net/sportstrackingdata/v2/user_agreements`
+`GET https://api.decathlon.net/sportstrackingdata/v2/user_agreements`
 
-`GET https://api-global.decathlon.net/sportstrackingdata/v2/user_agreements/#RESSOURCEID#`
+`GET https://api.decathlon.net/sportstrackingdata/v2/user_agreements/#RESSOURCEID#`
 
 
 
@@ -81,7 +81,7 @@ You can list all the user agreements and access to specific one.
 
 ```shell
 curl -X GET \
-    https://api-global.decathlon.net/sportstrackingdata/v2/user_agreements \
+    https://api.decathlon.net/sportstrackingdata/v2/user_agreements \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' 
@@ -130,7 +130,7 @@ You can modify the state of an user agreement. For example if an user wants to r
 
 ### Request
 
-`PUT https://api-global.decathlon.net/sportstrackingdata/v2/user_agreements/#RESSOURCEID#`
+`PUT https://api.decathlon.net/sportstrackingdata/v2/user_agreements/#RESSOURCEID#`
  
 
 
@@ -139,7 +139,7 @@ You can modify the state of an user agreement. For example if an user wants to r
 
 ```shell
 curl -X PUT \
-    https://api-global.decathlon.net/sportstrackingdata/v2/user_agreements/#RESSOURCEID# \
+    https://api.decathlon.net/sportstrackingdata/v2/user_agreements/#RESSOURCEID# \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \

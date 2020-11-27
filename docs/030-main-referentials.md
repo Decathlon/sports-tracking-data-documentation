@@ -52,13 +52,13 @@ A referential is read only. If you have a request to add a new item please conta
 
 
 
-`GET https://api-global.decathlon.net/sportstrackingdata/v2/sports`
+`GET https://api.decathlon.net/sportstrackingdata/v2/sports`
  
 > Curl
 
 ```shell
 curl -X GET \
-    https://api-global.decathlon.net/sportstrackingdata/v2/sports?active=1&page=1 \
+    https://api.decathlon.net/sportstrackingdata/v2/sports?active=1&page=1 \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \ 

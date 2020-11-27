@@ -5,13 +5,13 @@ Get the collection of activities.
 
 ### Request
 
-`GET https://api-global.decathlon.net/sportstrackingdata/v2/activities`
+`GET https://api.decathlon.net/sportstrackingdata/v2/activities`
 
 > Curl
 
 ```shell
 curl -X GET \
-    https://api-global.decathlon.net/sportstrackingdata/v2/activities \
+    https://api.decathlon.net/sportstrackingdata/v2/activities \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \

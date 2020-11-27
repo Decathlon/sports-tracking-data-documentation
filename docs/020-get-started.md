@@ -3,6 +3,37 @@
 
 API for quantified self and connected products : Sport activities, statistics , body measures & equipments
 
+## API Registration
+
+<img src="https://tempdecathloncoachinfo.s3.eu-central-1.amazonaws.com/API_subscription_steps.png" alt="planview" style="width: 700px;"/>
+
+**You want to use our API ? First filled** [this form](https://forms.gle/4WKN7ihQBpyzMt389) :
+
+
+
+If we validate your request, you will receive :
+
+* an api key
+* a client ID and secret for login
+
+
+## Swagger
+
+You can find a Swagger UI <a href="swagger.htm" target="_blank">here</a>.
+
+
+## Endpoints and stacks
+
+We have two major stacks, one in Europe (the default) and one in China (dedicated to the Chinese users).
+The default endpoint is : 
+https://api.decathlon.net/sportstrackingdata/v2/
+You can also specify the Europe stack by adding a prefix "eu2" : 
+https://api.decathlon.net/sportstrackingdata/eu2/v2/sports.json
+
+To reach the Chinese stack, add the prefix cn1 : 
+https://api.decathlon.net/sportstrackingdata/cn1/v2/
+
+
 
 ## API conventions 
 
@@ -17,33 +48,6 @@ Example : createdAt[after]=2018-03-19
 Country codes follow the is [norme ISO 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) with 2 char ( ex : FR)
 
 Language codes follow the [norme ISO 639-1](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) with 2 char ( ex : NL)
-
-
-## API Registration
-
-
-**You want to use our API ? First filled** [this form](https://forms.gle/4WKN7ihQBpyzMt389) :
-
-
-
-If we validate your application, you will receive :
-
-* an api key
-* a client ID and secret for login
-
-
-## Swagger
-
-You can find a Swagger UI <a href="swagger.htm" target="_blank">here</a>.
-
-
-## Endpoints and stacks
-
-We have two major stacks, one in Europe (the default) and one in China (dedicated to the Chinese users).
-The default endpoint is : https://api-global.decathlon.net/sportstrackingdata/v2/
-You can also specify the Europe stack by adding a prefix "eu2" : https://api-global.decathlon.net/sportstrackingdata/eu2/v2/sports.json
-
-To reach the Chinese stack, add the prefix cn1 : https://api-global.decathlon.net/sportstrackingdata/cn1/v2/
 
 
 ## Quota and rate-limiting
@@ -68,7 +72,7 @@ Flow supported :
 
 Create a login button with this link: 
 
-`https://api-global.decathlon.net/connect/oauth/authorize?client_id=YOUR_CLIENT_ID&locale=fr_FR&redirect_uri=YOUR_REDIRCT_URI&response_type=code&state=123454&scope=profile+openid+email+sports_tracking_data`
+`https://api.decathlon.net/connect/oauth/authorize?client_id=YOUR_CLIENT_ID&locale=fr_FR&redirect_uri=YOUR_REDIRCT_URI&response_type=code&state=123454&scope=profile+openid+email+sports_tracking_data`
 
 To be able to log-in you will need to create an application to use Decathlon Login : https://dktunited.github.io/dktconnect-login-doc/ 
 
@@ -84,7 +88,7 @@ Collect the code on your server side and validate it. You will receive bearer in
 
 ```shell
 curl -X POST \
-  'https://api-global.decathlon.net/connect/oauth/token?client_id=YOUR_CLIENT_ID&client_secret=CLIENT_ID_SECRET&grant_type=authorization_code&code=THE_USER_CODE&redirect_uri=https://YOUR_REDIRECT_URL' \
+  'https://api.decathlon.net/connect/oauth/token?client_id=YOUR_CLIENT_ID&client_secret=CLIENT_ID_SECRET&grant_type=authorization_code&code=THE_USER_CODE&redirect_uri=https://YOUR_REDIRECT_URL' \
 ``` 
 
 
@@ -92,7 +96,7 @@ curl -X POST \
 
 ```json
 {
-    "access_token": "eyJhbGciOiJSUzI1NEnR5cCI6IkpXVCJ9.eyJzdWIiOiI1YWIxMjY3OC1hYzhmLTRkM2YtOTMzOC02NTJlNzkxZGMyZWEiLCJzY29wZSI6WyJwcm9maWxlIl0sImlzcyI6ImRrY29ubmVjdC5vcmciLCJkYXX2NlbnRlciI6IkVVIiwicGVyc29uaWQiOiI1MDAwMDIzNDcwMSIsImV4cCI6MTU0NTEyNjA2NCwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6IjgxOTgxMTllLWQ4YjktNDc1ZC04MTlmLWExYTQyYWQ5YzNkMCIsImNsaWVudF9pZCI6ImRrY29ubmVjdCJ9.HGNlzYh_mlAmdazSMejNd2totNYChUZ33oZUHo27L_xfWR-C_b8-IUg-MKC0w-Or6zahifqJN5y1NfNlqrsLrAWXFg-ZDAyUYgec3kQmRaFG1AgLFUjwsCvGSYcIGY41PHM0WKRENyU_oDL7bN9AjaOLe3Ob-c2BRWBQu6a5W6fmqugQ28ZFLTGDUTcIcsOdTg0DqBU82B_CjsVrK_x1gLM4y2ozkXJ_OmvCl5CjNsvaYJHKANl8gA5TQgX7IaUAwf7YNcun_rnO1k-FeYoc_OLHWIQG1UDrbDrtUUH-WQo7AE9X5BhgzXjWd1rubv703nbq6RP3BeeoeoJIDQ",
+    "access_token": "your_acces_token",
     "token_type": "bearer",
     "refresh_token": "XXX",
     "expires_in": 899,
@@ -113,13 +117,13 @@ The main API operations are :
 
 ## The first call
 
-`GET https://api-global.decathlon.net/sportstrackingdata/v2/me/`
+`GET https://api.decathlon.net//sportstrackingdata/v2/me/`
 
 > Curl
 
 ```shell
 curl -X GET \
-    https://api-global.decathlon.net/sportstrackingdata/v2/me/ \
+    https://api.decathlon.net//sportstrackingdata/v2/me/ \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \

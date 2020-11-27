@@ -4,7 +4,7 @@ In this part we describe the components of an activity.
 
 ### Request
 
-`GET https://api-global.decathlon.net/sportstrackingdata/v2/activities/{{ACTIVITY_TOKEN}}`
+`GET https://api.decathlon.net/sportstrackingdata/v2/activities/{{ACTIVITY_TOKEN}}`
  
 
 
@@ -12,7 +12,7 @@ In this part we describe the components of an activity.
 
 ```shell
 curl -X GET \
-    https://api-global.decathlon.net/sportstrackingdata/v2/activities/{{ACTIVITY_TOKEN}} \
+    https://api.decathlon.net/sportstrackingdata/v2/activities/{{ACTIVITY_TOKEN}} \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}'
@@ -371,7 +371,7 @@ You can also get an activity in GPX or TCX format.
 
 ```shell
 curl -X GET \
-    https://api-global.decathlon.net/sportstrackingdata/v2/activities/{{ACTIVITY_TOKEN}} \
+    https://api.decathlon.net/sportstrackingdata/v2/activities/{{ACTIVITY_TOKEN}} \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Accept: application/gpx+xml' \
   -H 'x-api-key: {your api key}'
@@ -382,7 +382,7 @@ curl -X GET \
 
 ```shell
 curl -X GET \
-    https://api-global.decathlon.net/sportstrackingdata/v2/activities/{{ACTIVITY_TOKEN}} \
+    https://api.decathlon.net/sportstrackingdata/v2/activities/{{ACTIVITY_TOKEN}} \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Accept: application/tcx+xml' \
   -H 'x-api-key: {your api key}'

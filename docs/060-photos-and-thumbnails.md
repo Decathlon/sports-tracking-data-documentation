@@ -16,7 +16,7 @@ Photo | Mandatory | less than 3Mo
 
 ### Request
 
-`POST https://api-global.decathlon.net/sportstrackingdata/v2/upload`
+`POST https://api.decathlon.net/sportstrackingdata/v2/upload`
  
 
 
@@ -24,7 +24,7 @@ Photo | Mandatory | less than 3Mo
 
 ```shell
 curl -X POST \
-    https://api-global.decathlon.net/sportstrackingdata/v2/upload \
+    https://api.decathlon.net/sportstrackingdata/v2/upload \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \
@@ -55,13 +55,13 @@ status 5xx : Server errors, check response for details.
 
 ### Request
 
-`PUT https://api-global.decathlon.net/sportstrackingdata/v2/activities/TOKEN`
+`PUT https://api.decathlon.net/sportstrackingdata/v2/activities/TOKEN`
  
 > Curl
 
 ```shell
 curl -X PUT \
-    https://api-global.decathlon.net/sportstrackingdata/v2/activities/TOKEN \
+    https://api.decathlon.net/sportstrackingdata/v2/activities/TOKEN \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \
@@ -78,7 +78,7 @@ curl -X PUT \
 
 ```shell
 curl -X PUT \
-    https://api-global.decathlon.net/sportstrackingdata/v2/activities/TOKEN \
+    https://api.decathlon.net/sportstrackingdata/v2/activities/TOKEN \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \
@@ -92,7 +92,7 @@ Before changing the thumbnail, it could be useful to save the actual thumbnail a
 
 ### Request
 
-`PUT https://api-global.decathlon.net/sportstrackingdata/v2/activities/TOKEN`
+`PUT https://api.decathlon.net/sportstrackingdata/v2/activities/TOKEN`
  
 
 
