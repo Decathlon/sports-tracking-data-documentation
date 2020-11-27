@@ -12,7 +12,7 @@ This page shows you how to create a new device for an user.
 
 ### Request
 
-`POST https://api-eu.decathlon.net/sportstrackingdata/v2/user_devices`
+`POST https://api-global.decathlon.net/sportstrackingdata/v2/user_devices`
  
 > Request body 
 
@@ -37,7 +37,7 @@ You will need to indicated some URI ressources to create a new device :
 
 ```shell
 curl -X POST \
-    https://api-eu.decathlon.net/sportstrackingdata/v2/user_devices \
+    https://api-global.decathlon.net/sportstrackingdata/v2/user_devices \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \

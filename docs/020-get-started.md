@@ -37,6 +37,22 @@ If we validate your application, you will receive :
 You can find a Swagger UI <a href="swagger.htm" target="_blank">here</a>.
 
 
+## Endpoints and stacks
+
+We have two major stacks, one in Europe (the default) and one in China (dedicated to the Chinese users).
+The default endpoint is : https://api-global.decathlon.net/sportstrackingdata/v2/
+You can also specify the Europe stack by adding a prefix "eu2" : https://api-global.decathlon.net/sportstrackingdata/eu2/v2/sports.json
+
+To reach the Chinese stack, add the prefix cn1 : https://api-global.decathlon.net/sportstrackingdata/cn1/v2/
+
+
+## Quota and rate-limiting
+
+By default, we apply :
+* 100k api calls per day
+* 1k maximum burst calls/minute
+
+
 ## Authentification
 
 Sports Tracking Data is a ressource server, the identification and authorization role is assumed by *Decathlon Login*.
@@ -46,14 +62,13 @@ Full documentation about Decathlon Login available <a href="https://dktunited.gi
 Flow supported :
 
 * Authorization code
-* Implicit flow
 
 
 ### Login flow Authorization Code
 
 Create a login button with this link: 
 
-`https://api-eu.decathlon.net/connect/oauth/authorize?client_id=YOUR_CLIENT_ID&locale=fr_FR&redirect_uri=YOUR_REDIRCT_URI&response_type=code&state=123454&scope=profile+openid+email+sports_tracking_data`
+`https://api-global.decathlon.net/connect/oauth/authorize?client_id=YOUR_CLIENT_ID&locale=fr_FR&redirect_uri=YOUR_REDIRCT_URI&response_type=code&state=123454&scope=profile+openid+email+sports_tracking_data`
 
 To be able to log-in you will need to create an application to use Decathlon Login : https://dktunited.github.io/dktconnect-login-doc/ 
 
@@ -69,7 +84,7 @@ Collect the code on your server side and validate it. You will receive bearer in
 
 ```shell
 curl -X POST \
-  'https://api-eu.decathlon.net/connect/oauth/token?client_id=YOUR_CLIENT_ID&client_secret=CLIENT_ID_SECRET&grant_type=authorization_code&code=THE_USER_CODE&redirect_uri=https://YOUR_REDIRECT_URL' \
+  'https://api-global.decathlon.net/connect/oauth/token?client_id=YOUR_CLIENT_ID&client_secret=CLIENT_ID_SECRET&grant_type=authorization_code&code=THE_USER_CODE&redirect_uri=https://YOUR_REDIRECT_URL' \
 ``` 
 
 
@@ -98,13 +113,13 @@ The main API operations are :
 
 ## The first call
 
-`GET https://api-eu.decathlon.net/sportstrackingdata/v2/me/`
+`GET https://api-global.decathlon.net/sportstrackingdata/v2/me/`
 
 > Curl
 
 ```shell
 curl -X GET \
-    https://api-eu.decathlon.net/sportstrackingdata/v2/me/ \
+    https://api-global.decathlon.net/sportstrackingdata/v2/me/ \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \

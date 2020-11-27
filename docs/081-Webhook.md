@@ -9,7 +9,7 @@ For a user, if you create a webhook to an URL that you manage, you will receive 
 
 ### Request
 
-`POST https://api-eu.decathlon.net/sportstrackingdata/v2/user_web_hooks`
+`POST https://api-global.decathlon.net/sportstrackingdata/v2/user_web_hooks`
  
 
 
@@ -17,7 +17,7 @@ For a user, if you create a webhook to an URL that you manage, you will receive 
 
 ```shell
 curl -X POST \
-    https://api-eu.decathlon.net/sportstrackingdata/v2/user_web_hooks \
+    https://api-global.decathlon.net/sportstrackingdata/v2/user_web_hooks \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \
