@@ -32,7 +32,7 @@ status 200 : Ok
             "@type": "Activity",
             "id": "eu205bc29d9975f27cfb",
             "name": "Test V2 - Android - 21 juin 2018",
-            "user": "/v2/users/ed3a20dfabaf09ae73f6",
+            "user": "/v2/users/ed3a20dfae73f6xxxxxxx",
             "sport": "/v2/sports/381",
             "userDevice": null,
             "startdate": "2018-06-21T09:36:03+02:00",
@@ -46,7 +46,7 @@ status 200 : Ok
             "userSession": null,
             "correctedElevation": true,
             "images": [],
-            "thumbnail": "https://linkdata-ressources-eu2.geonaute.com/prod/ed3a20dfabaf09ae73f6/maps/eu205bc29d9975f27cfb.png",
+            "thumbnail": "https://linkdata-ressources-eu2.geonaute.com/prod/ed3a20dfae73f6xxxxxxx/maps/eu205bc29d9975f27cfb.png",
             "dataSummaries": {
                 "5": 4127,
                 "9": 19731,

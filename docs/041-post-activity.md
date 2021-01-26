@@ -153,7 +153,7 @@ status 201 : Created
     "@type": "Activity",
     "id": "eu2a8ff4b670340f5144",
     "name": "My workout",
-    "user": "/v2/users/ed3a20dfabaf09ae73f6",
+    "user": "/v2/users/ed3a20dfae73f6xxxxxxx",
     "sport": "/v2/sports/381",
     "userDevice": null,
     "startdate": "2018-04-19T08:28:49+02:00",
