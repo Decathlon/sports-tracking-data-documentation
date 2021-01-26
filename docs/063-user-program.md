@@ -273,7 +273,7 @@ status 5xx : Server errors, check response for details.
 
 To modify a program, exemple here, to declare that a program was finished by the user :
 
-### Request
+### Request 
 
 `PUT https://api.decathlon.net/sportstrackingdata/v2/user_programs/programID`
  

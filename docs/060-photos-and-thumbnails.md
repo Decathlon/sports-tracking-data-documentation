@@ -14,6 +14,9 @@ Photo | Mandatory | less than 3Mo
 
 ## Upload a photo
 
+This API point only accept these files extensions :
+gpx,tcx,json,xml,jpeg
+
 ### Request
 
 `POST https://api.decathlon.net/sportstrackingdata/v2/upload`

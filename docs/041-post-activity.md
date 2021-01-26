@@ -214,4 +214,5 @@ These abstractions allow to manipulate any sports with any data. (Tennis, runnin
 
 ## Limitations
 * You can not POST an activity with a payload size bigger than 3 Mo.
+* Activities tag can't contain special caracters (@,*;:/ for exemple) and can't not contain space. 
 
