@@ -2,6 +2,11 @@
 
 Changelogs :
 
+
+## Version 2.28.0
+* Accept FIT format files
+
+
 ## Version 2.25.1
 * Hotfix on PUT user_measures : when you modify an existing user's weight on kg (datatype 22), the weight on grams (datatype 181) is also updated .
 * Hotfix on PUT activity : In some cases, old activities (older than 2018/11) could't be updated.

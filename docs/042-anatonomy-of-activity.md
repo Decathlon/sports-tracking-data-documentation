@@ -363,9 +363,9 @@ If the activity is stationary the node should be empty ("locations": {})
 }
 ```
 
-## GPX and TCX compatibility
+## GPX, TCX and FIT compatibility
 
-You can also get an activity in GPX or TCX format.
+You can also get an activity in GPX, TCX or FIT format.
 
 > Curl
 
@@ -388,15 +388,43 @@ curl -X GET \
   -H 'x-api-key: {your api key}'
 ```
 
+
+> Curl
+
+```shell
+curl -X GET \
+    https://api.decathlon.net/sportstrackingdata/v2/activities/{{ACTIVITY_TOKEN}}.fit \
+  -H 'Authorization: Bearer {your bearer}' \
+  -H 'Accept: application/octet-stream' \
+  -H 'x-api-key: {your api key}'
+```
+
+
 ### Header accept for GPX
 
 `Accept: application/gpx+xml`
 
 
 
-### Header accept for TPX
+### Header accept for TCX
 
 `Accept: application/tcx+xml`
 
 
+### Header accept for FIT
 
+`Accept: application/octet-stream`
+
+
+### Example to post an activity fit file
+
+> Curl
+
+```shell
+curl -X POST \
+    https://api.decathlon.net/sportstrackingdata/v2/activities \
+  -H 'Authorization: Bearer {your bearer}' \
+  -H 'Content-Type: application/octet-stream' \
+  -H 'x-api-key: {your api key}'
+  –data-binary 'your_fit_file'
+```

@@ -117,13 +117,13 @@ The main API operations are :
 
 ## The first call
 
-`GET https://api.decathlon.net//sportstrackingdata/v2/me`
+`GET https://api.decathlon.net/sportstrackingdata/v2/me`
 
 > Curl
 
 ```shell
 curl -X GET \
-    https://api.decathlon.net//sportstrackingdata/v2/me \
+    https://api.decathlon.net/sportstrackingdata/v2/me \
   -H 'Authorization: Bearer {your bearer}' \
   -H 'Content-Type: application/json' \
   -H 'x-api-key: {your api key}' \

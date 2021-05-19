@@ -1,6 +1,8 @@
 # Add an activity
 
-Add a sport activity to your account
+Add a sport activity to your account.
+
+You can use our native format or use another format like GPX, TCX or FIT (please referer to "GPX, TCX and FIT compatibility")
 
 ### Request
 
