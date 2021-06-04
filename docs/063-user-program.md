@@ -15,6 +15,12 @@ activity > user_session > user_program
 * modelId : Your program model identifier
 * current : A boolean to know if this program is used.
 
+Some informations are optionals :
+* language : standard iso (ex : 'fr','es')
+* provider : name the program provider (whitelisted) allowed value : DCM. If you need new value, contact us.
+* status : (pending / processing / completed / cancelled) default : pending
+* preferences : json with informations, allowed : "week_days" : ["monday","wednesday"]
+
 
 The basic needs :
 
@@ -27,9 +33,15 @@ The basic needs :
 
 ```json
 {
-    "modelId": "XXX",
+    "modelId": "myModelID",
     "user": "/v2/users/{{ldid}}",
-    "current": true
+    "current": true,
+    "language": "be",
+    "provider": "DCM",
+    "status": "processing",
+    "preferences": {
+        "week_days" : ["monday","wednesday"]
+    }
 }
 ```
 
@@ -39,16 +51,25 @@ The basic needs :
 status 201 : Created
 {
     "@context": "/v2/contexts/UserProgram",
-    "@id": "/v2/user_programs/XXX",
+    "@id": "/v2/user_programs/xxx",
     "@type": "UserProgram",
-    "id": "XXX",
-    "modelId": "XXX",
+    "id": "xxx",
+    "modelId": "xxx",
     "userSessions": [],
-    "user": "/v2/users/XXX",
+    "user": "/v2/users/xxx",
     "current": true,
+    "language": "be",
+    "preferences": {
+        "week_days": [
+            "monday",
+            "wednesday"
+        ]
+    },
+    "provider": "DCM",
+    "status": "processing",
     "endedAt": null,
-    "createdAt": "2020-04-17T08:02:53+00:00",
-    "updatedAt": "2020-04-17T08:02:53+00:00"
+    "createdAt": "2021-06-04T12:31:59+00:00",
+    "updatedAt": "2021-06-04T12:31:59+00:00"
 }
 
 status 4xx : Client errors, check response for details.
@@ -71,9 +92,15 @@ This method will automatically create your user program and your user sessions l
 
 ```json
 {
-    "modelId": "XXX",
+    "modelId": "myModelID",
     "user": "/v2/users/{{ldid}}",
     "current": true,
+    "language": "be",
+    "provider": "DCM",
+    "status": "processing",
+    "preferences": {
+        "week_days" : ["monday","wednesday"]
+    },
     "userSessions": [
         {
             "modelId": "XXX",
@@ -97,10 +124,10 @@ This method will automatically create your user program and your user sessions l
 status 201 : Created
 {
     "@context": "/v2/contexts/UserProgram",
-    "@id": "/v2/user_programs/XXX",
+    "@id": "/v2/user_programs/xxx",
     "@type": "UserProgram",
-    "id": "XXX",
-    "modelId": "XXX",
+    "id": "xxx",
+    "modelId": "xxx",
     "userSessions": [
         {
             "@id": "/v2/user_sessions/XXX",
@@ -119,11 +146,20 @@ status 201 : Created
             "type": "string"
         }
     ],
-    "user": "/v2/users/XXX",
+    "user": "/v2/users/xxx",
     "current": true,
+    "language": "be",
+    "preferences": {
+        "week_days": [
+            "monday",
+            "wednesday"
+        ]
+    },
+    "provider": "DCM",
+    "status": "processing",
     "endedAt": null,
-    "createdAt": "2020-04-17T08:13:18+00:00",
-    "updatedAt": "2020-04-17T08:13:18+00:00"
+    "createdAt": "2021-06-04T12:31:59+00:00",
+    "updatedAt": "2021-06-04T12:31:59+00:00"
 }
 
 status 4xx : Client errors, check response for details.
@@ -181,11 +217,15 @@ status 200: OK
                     "type": "string"
                 }
             ],
-            "user": "/v2/users/XXX",
-            "current": false,
-            "endedAt": "2019-03-25T16:17:44+00:00",
-            "createdAt": "2019-03-25T16:10:40+00:00",
-            "updatedAt": "2019-03-25T16:17:44+00:00"
+            "user": "/v2/users/xxx",
+            "current": true,
+            "language": null,
+            "preferences": [],
+            "provider": null,
+            "status": "pending",
+            "endedAt": null,
+            "createdAt": "2021-03-24T16:09:18+00:00",
+            "updatedAt": "2021-03-24T16:09:18+00:00"
         }
     ],
     "hydra:view": {
