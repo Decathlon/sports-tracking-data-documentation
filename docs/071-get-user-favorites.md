@@ -10,7 +10,7 @@ User can save some favorites things.
 
 
 
-## Retreive user's favorites
+## Retrieve user's favorites
 
 ### Parameters
 
